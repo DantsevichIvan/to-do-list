@@ -1,9 +1,11 @@
 import os
+
 FILEPATH = "todos.txt"
 
 if not os.path.exists(FILEPATH):
     with open("todos.txt", "w") as file:
         pass
+
 
 def get_todos(filepath=FILEPATH):
     """ Read a text file and return the list of
@@ -18,7 +20,3 @@ def write_todos(value, filepath=FILEPATH):
     """ Write the to-do items list in the text file."""
     with open(filepath, "w") as file_local:
         file_local.writelines(value)
-
-
-if __name__ == "__main__":
-    print(get_todos())
